@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1102,2536</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1102,2569</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -124,7 +124,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1112,2471" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1112,2504" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -133,13 +133,13 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="1050,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
     <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="1050,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1050,2050" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[in_NSEBrowser]" OpenMode="Never" ScopeGuid="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1050,2083" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[in_NSEBrowser]" OpenMode="Never" ScopeGuid="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,1850" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,1923" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="CompanyName" />
               <Variable x:TypeArguments="x:String" Name="PrevClose" />
@@ -151,7 +151,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DisplayName="Type Into 'USDINR'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" Text="[in_TransactionItem.SpecificContent(&quot;CompanyCode&quot;).ToString]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBefore="2" DisplayName="Type Into: Search company code " EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" Text="[in_TransactionItem.SpecificContent(&quot;CompanyCode&quot;).ToString]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.nseindia.com/" CVScreenId="725e9241-a4c1-4601-a0bc-874704b1ab93" CvTextArea="399, 188, 248, 15" CvTextArgument="Search by company name, symbol or keyword" CvType="Text" DesignTimeRectangle="385, 178, 340, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='header-search-input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='header-search-input' tag='INPUT' type='text' class='typeahead tt-input' placeholder='Search by company name, symbol or keyword' aaname='' /&gt;" Guid="91c5e4db-e3c6-4e42-beb7-f66dc09b8d04" InformativeScreenshot="d991110306acf09f193d2ac3b2762813.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News &amp;amp; Updates, Quotes- Nseindia.com' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -162,16 +162,22 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="954,211" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(Down)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V3" />
-            <uix:NCheckState DisplayName="Check App State 'Infosys Limited'" sap:VirtualizedContainerService.HintSize="954,1299" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" Version="V3">
+            <uix:NKeyboardShortcuts ActivateBefore="True" sap2010:Annotation.AnnotationText="From thr dropdown choose the respective options" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts: Select the company" sap:VirtualizedContainerService.HintSize="954,242" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(Down)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NKeyboardShortcuts>
+            <uix:NCheckState DisplayName="Check App State :  Required page" sap:VirtualizedContainerService.HintSize="954,1341" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1057" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target appears : " sap:VirtualizedContainerService.HintSize="450,1099" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NGetText DisplayName="Get Text 'INFY'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[CompanyName]" Version="V3">
+                  <uix:NGetText DisplayName="Get Text : Company code" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[CompanyName]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.nseindia.com/get-quotes/equity?symbol=INFY" CVScreenId="deb7f4d7-4de0-4b00-9fac-9958ffde4167" CvTextArea="229, 324, 148, 15" CvType="AnyWordGroup" DesignTimeRectangle="231, 323, 150, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='quoteName' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='quoteName' tag='SPAN' type='' class='' /&gt;" Guid="853cd7d1-8ba5-4203-906f-bcbc76d50487" ImageBase64="" InformativeScreenshot="57d23dc012841efecc6fa223b718ba71.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Limited Share Price Today, Stock Price, Live NSE News, Quotes, Tips – NSE India' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -182,7 +188,7 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <uix:NGetText DisplayName="Get Text 'Prev. Close'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[PrevClose]" Version="V3">
+                  <uix:NGetText DisplayName="Get Text : 'Prev. Close'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[PrevClose]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.nseindia.com/get-quotes/equity?symbol=INFY" CVScreenId="16c87375-fa14-46fd-b117-69d4d6f0c677" CvTextArea="404, 426, 59, 16" CvType="AnyWordGroup" DesignTimeRectangle="405, 416, 155, 34" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='priceInfoTable' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='priceInfoTable' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' /&gt;" Guid="a5a03d85-ae1a-434e-a712-8194cd785e0b" ImageBase64="" InformativeScreenshot="66bc0d9f507b5cbad0c710a9da22a739.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Limited Share Price Today, Stock Price, Live NSE News, Quotes, Tips – NSE India' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -193,7 +199,7 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <uix:NGetText DisplayName="Get Text '52 Week High'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[HighValue]" Version="V3">
+                  <uix:NGetText DisplayName="Get Text : '52 Week High'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[HighValue]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.nseindia.com/get-quotes/equity?symbol=INFY" CVScreenId="009ce938-03b0-4c34-b91c-a69a97c65238" CvTextArea="1029, 582, 49, 14" CvType="AnyWordGroup" DesignTimeRectangle="1030, 582, 48, 14" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='presentation' idx='2' parentid='info-tradeinfo' tag='TABLE' /&gt;&lt;webctrl class='bold' tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' parentid='info-tradeinfo' tag='TABLE' /&gt;&lt;webctrl class='bold' type='' tag='SPAN' /&gt;" Guid="b5c3e99a-7154-4466-a127-e6e1b372d194" ImageBase64="" InformativeScreenshot="68114ff63ab8df5868312f43a4c30304.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Limited Share Price Today, Stock Price, Live NSE News, Quotes, Tips – NSE India' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -204,7 +210,7 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <uix:NGetText DisplayName="Get Text 'Face Value'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[FaceValue]" Version="V3">
+                  <uix:NGetText DisplayName="Get Text :  'Face Value'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[FaceValue]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.nseindia.com/get-quotes/equity?symbol=INFY" CVScreenId="009ce938-03b0-4c34-b91c-a69a97c65238" CvTextArea="769, 796, 9, 12" CvType="AnyWordGroup" DesignTimeRectangle="700, 789, 84, 28" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aria-role='presentation' parentid='info-tradeinfo' tag='TABLE' /&gt;&lt;webctrl class='text-end' tableRow='9' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' parentid='info-tradeinfo' tag='TABLE' /&gt;&lt;webctrl class='text-end' type='' tag='TD' aaname='' /&gt;" Guid="e476f500-9331-4424-bcac-29234315108c" ImageBase64="" InformativeScreenshot="51202cf6e078d9ae614559bfa9b37b61.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Infosys Limited Share Price Today, Stock Price, Live NSE News, Quotes, Tips – NSE India' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -215,7 +221,13 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{ in_TransactionItem.SpecificContent(&quot;CompanyCode&quot;), CompanyName, PrevClose, HighValue , FaceValue }]" DataTable="[io_dt_NSEData]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,211" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                  <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="If all the values are retreived successully then append the row of valus to the data table " ArrayRow="[{ in_TransactionItem.SpecificContent(&quot;CompanyCode&quot;), CompanyName, PrevClose , FaceValue , HighValue}]" DataTable="[io_dt_NSEData]" DisplayName="Add Data Row : Append to the data able " sap:VirtualizedContainerService.HintSize="388,253" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:AddDataRow>
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
@@ -225,7 +237,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Throw Exception="[new BusinessRuleException]" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  <Throw DisplayName="Throw : Bussiness exception" Exception="[new BusinessRuleException]" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
