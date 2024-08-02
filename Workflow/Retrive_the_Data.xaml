@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1146.4,2971.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1148,2958</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Retrive_the_Data_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,20 +119,20 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Navigate to NSE browser and for the given comapny code, find the company name , face value , high value and prev close. update the data row with the retrieved data " DisplayName="Retrieve_the_data" sap:VirtualizedContainerService.HintSize="1156.8,2906.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence sap2010:Annotation.AnnotationText="Navigate to NSE browser and for the given comapny code, find the company name , face value , high value and prev close. update the data row with the retrieved data " DisplayName="Retrieve_the_data" sap:VirtualizedContainerService.HintSize="1158,2893" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome:  National Stock Exchange of India Ltd" sap:VirtualizedContainerService.HintSize="1094.4,2786.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome:  National Stock Exchange of India Ltd" sap:VirtualizedContainerService.HintSize="1096,2774" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do : Search the company code " sap:VirtualizedContainerService.HintSize="1060.8,2546.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do : Search the company code " sap:VirtualizedContainerService.HintSize="1062,2534" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="CompanyName" />
               <Variable x:TypeArguments="x:String" Name="PrevClose" />
@@ -145,10 +145,10 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGoToUrl DisplayName="Go To URL : NSE company " sap:VirtualizedContainerService.HintSize="998.4,114.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[in_config(&quot;BrowserURL&quot;).tostring + in_config(&quot;AppendtoUrl&quot;).ToString + in_TransactionItem.SpecificContent(&quot;CompanyCode&quot;).ToString]" Version="V3" />
-            <uix:NCheckState DisplayName="Check App State :  Check is target appears " sap:VirtualizedContainerService.HintSize="998.4,2343.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" Timeout="2" Version="V3">
+            <uix:NGoToUrl DisplayName="Go To URL : NSE company " sap:VirtualizedContainerService.HintSize="1000,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[in_config(&quot;BrowserURL&quot;).tostring + in_config(&quot;AppendtoUrl&quot;).ToString + in_TransactionItem.SpecificContent(&quot;CompanyCode&quot;).ToString]" Version="V3" />
+            <uix:NCheckState DisplayName="Check App State :  Check is target appears " sap:VirtualizedContainerService.HintSize="1000,2330" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" Timeout="5" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears : Succesfully loaded " sap:VirtualizedContainerService.HintSize="496,2100" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Target appears : Succesfully loaded " sap:VirtualizedContainerService.HintSize="496,2088" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="s:Object[]" Default="[New Object(){}]" Name="DatarowObjectArray" />
                   </Sequence.Variables>
@@ -158,7 +158,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NGetText DisplayName="Get Text : Company code" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[CompanyName]" Version="V3">
+                  <uix:NGetText DisplayName="Get Text : Company code" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[CompanyName]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.nseindia.com/get-quotes/equity?symbol=INFY" CVScreenId="deb7f4d7-4de0-4b00-9fac-9958ffde4167" CvTextArea="229, 324, 148, 15" CvType="AnyWordGroup" DesignTimeRectangle="231, 323, 150, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='quoteName' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='quoteName' tag='SPAN' type='' class='' /&gt;" Guid="853cd7d1-8ba5-4203-906f-bcbc76d50487" ImageBase64="" InformativeScreenshot="57d23dc012841efecc6fa223b718ba71.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -169,8 +169,8 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <ui:LogMessage DisplayName="Log Message : Company name " sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Company name is &quot; + CompanyName]" />
-                  <uix:NGetText DisplayName="Get Text : 'Prev. Close'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[PrevClose]" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message : Company name " sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Company name is &quot; + CompanyName]" />
+                  <uix:NGetText DisplayName="Get Text : 'Prev. Close'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[PrevClose]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.nseindia.com/get-quotes/equity?symbol=INFY" CVScreenId="16c87375-fa14-46fd-b117-69d4d6f0c677" CvTextArea="404, 426, 59, 16" CvType="AnyWordGroup" DesignTimeRectangle="405, 416, 155, 34" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='priceInfoTable' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='priceInfoTable' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' /&gt;" Guid="a5a03d85-ae1a-434e-a712-8194cd785e0b" ImageBase64="" InformativeScreenshot="66bc0d9f507b5cbad0c710a9da22a739.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -181,8 +181,8 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <ui:LogMessage DisplayName="Log Message : Prev close " sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot; Prev close value is &quot; + PrevClose]" />
-                  <uix:NGetText DisplayName="Get Text : '52 Week High'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[HighValue]" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message : Prev close " sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot; Prev close value is &quot; + PrevClose]" />
+                  <uix:NGetText DisplayName="Get Text : '52 Week High'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[HighValue]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.nseindia.com/get-quotes/equity?symbol=INFY" CVScreenId="009ce938-03b0-4c34-b91c-a69a97c65238" CvTextArea="1029, 582, 49, 14" CvType="AnyWordGroup" DesignTimeRectangle="1030, 582, 48, 14" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='presentation' parentid='info-tradeinfo' tag='TABLE' /&gt;&lt;webctrl class='bold' tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' parentid='info-tradeinfo' tag='TABLE' /&gt;&lt;webctrl class='bold' type='' tag='SPAN' /&gt;" Guid="b5c3e99a-7154-4466-a127-e6e1b372d194" ImageBase64="" InformativeScreenshot="68114ff63ab8df5868312f43a4c30304.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -193,8 +193,8 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <ui:LogMessage DisplayName="Log Message : 52 week high value " sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot; 52 week high value is &quot; + HighValue]" />
-                  <uix:NGetText DisplayName="Get Text :  'Face Value'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[FaceValue]" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message : 52 week high value " sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot; 52 week high value is &quot; + HighValue]" />
+                  <uix:NGetText DisplayName="Get Text :  'Face Value'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="fd9027fe-28fe-44be-92ba-06a4bd01f3fd" TextString="[FaceValue]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://www.nseindia.com/get-quotes/equity?symbol=INFY" CVScreenId="009ce938-03b0-4c34-b91c-a69a97c65238" CvTextArea="769, 796, 9, 12" CvType="AnyWordGroup" DesignTimeRectangle="700, 789, 84, 28" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aria-role='presentation' parentid='info-tradeinfo' tag='TABLE' /&gt;&lt;webctrl class='text-end' tableRow='9' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' parentid='info-tradeinfo' tag='TABLE' /&gt;&lt;webctrl class='text-end' type='' tag='TD' aaname='' /&gt;" Guid="e476f500-9331-4424-bcac-29234315108c" ImageBase64="" InformativeScreenshot="51202cf6e078d9ae614559bfa9b37b61.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -205,8 +205,8 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <ui:LogMessage DisplayName="Log Message : Face value " sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Fatal" Message="[&quot; Face value is &quot; + FaceValue]" />
-                  <Assign DisplayName="Assign DatarowObjectArray" sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <ui:LogMessage DisplayName="Log Message : Face value " sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Fatal" Message="[&quot; Face value is &quot; + FaceValue]" />
+                  <Assign DisplayName="Assign DatarowObjectArray" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="s:Object[]">[DatarowObjectArray]</OutArgument>
                     </Assign.To>
@@ -214,32 +214,32 @@
                       <InArgument x:TypeArguments="s:Object[]">[{ in_TransactionItem.SpecificContent("CompanyCode").ToString, CompanyName, PrevClose , FaceValue , HighValue}]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="If all the values are retreived successully then append the row of valus to the data table " ArrayRow="[DatarowObjectArray]" DataTable="[io_dt_NSEData]" DisplayName="Add Data Row : Append to the data table " sap:VirtualizedContainerService.HintSize="433.6,264" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                  <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="If all the values are retreived successully then append the row of valus to the data table " ArrayRow="[DatarowObjectArray]" DataTable="[io_dt_NSEData]" DisplayName="Add Data Row : Append to the data table " sap:VirtualizedContainerService.HintSize="434,260" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:AddDataRow>
-                  <ui:LogMessage DisplayName="Log Message Data Row loaded" sap:VirtualizedContainerService.HintSize="433.6,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Data row loaded. &quot;+ String.Join(&quot;,&quot;,DatarowObjectArray)]" />
+                  <ui:LogMessage DisplayName="Log Message Data Row loaded" sap:VirtualizedContainerService.HintSize="434,168" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Data row loaded. &quot;+ String.Join(&quot;,&quot;,DatarowObjectArray)]" />
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear : Target failed " sap:VirtualizedContainerService.HintSize="449.6,381.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target does not appear : Target failed " sap:VirtualizedContainerService.HintSize="450,380" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message : Bussiness exception" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Target failed ! Invalid Company code &quot;]" />
-                  <Throw DisplayName="Throw : Bussiness exception" Exception="[new BusinessRuleException(&quot;Invalid company code&quot;)]" sap:VirtualizedContainerService.HintSize="387.2,115.2" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  <ui:LogMessage DisplayName="Log Message : Bussiness exception" sap:VirtualizedContainerService.HintSize="388,175" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Target failed ! Invalid Company code &quot;]" />
+                  <Throw DisplayName="Throw : Bussiness exception" Exception="[new BusinessRuleException(&quot;Invalid company code&quot;)]" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="https://www.nseindia.com/get-quotes/equity?symbol=INFY" CVScreenId="5ea556f3-142f-46e8-88d9-43931df0e87e" CvTextArea="229, 324, 148, 15" CvTextArgument="INFOSYS LIMITED" CvType="Text" DesignTimeRectangle="231, 323, 150, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='quoteName' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='quoteName' tag='SPAN' type='' class='' aaname=' Infosys Limited ' check:innerText='INFOSYS LIMITED' /&gt;" Guid="d0afbe12-d7e5-4330-9158-642a0a727d20" InformativeScreenshot="e3ed115ff54e2567d236217e68b4f797.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://www.nseindia.com/get-quotes/equity?symbol=INFY" CVScreenId="5ea556f3-142f-46e8-88d9-43931df0e87e" CvTextArea="229, 324, 148, 15" CvTextArgument="INFOSYS LIMITED" CvType="Text" DesignTimeRectangle="231, 323, 338, 19" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='quoteName' tag='SPAN' aaname=' * ' innertext=' *' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='quoteName' tag='SPAN' aaname=' * ' innertext=' *' type='' class='' check:text='Wipro Limited' /&gt;" Guid="d0afbe12-d7e5-4330-9158-642a0a727d20" InformativeScreenshot="47e8414b23240fb96f9b289d2ff4264c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="5ea556f3-142f-46e8-88d9-43931df0e87e" CvElementArea="208, 274, 82, 36" CvTextArea="229, 284, 32, 12" CvTextArgument="INFY" CvType="Button" DesignTimeRectangle="211, 275, 79, 32" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='tab' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='tab' tag='A' type='' class='nav-item nav-link active' aaname='INFY' check:innerText='INFY' /&gt;" Guid="97f72ceb-5fb5-421a-be38-316371015c9c" SearchSteps="Selector" />
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="5ea556f3-142f-46e8-88d9-43931df0e87e" CvElementArea="208, 274, 82, 36" CvTextArea="229, 284, 32, 12" CvTextArgument="INFY" CvType="Button" DesignTimeRectangle="211, 275, 73, 32" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='tab' tag='A' aaname='*' innertext='*' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='tab' tag='A' aaname='*' innertext='*' type='' class='nav-item nav-link active' check:text='WIPRO' /&gt;" Guid="97f72ceb-5fb5-421a-be38-316371015c9c" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
